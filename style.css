@@ -98,6 +98,13 @@ input {
 input:invalid {
     border-color: red;
 }
+input + p{
+    display: none;
+}
+input:invalid+p {
+    display: block;
+    color: red;
+}
 input:focus {
     border-color: rebeccapurple;
 }
@@ -110,7 +117,6 @@ input:focus {
     margin-bottom: 1rem;
 }
 .row div{
-    /* width: 40%; */
     text-align: left;
     width: 50%;
 }
