@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 4fr;
+}
+
+.sidebar {
+    background-color: #60a5fa;
+    padding-left: 3rem;
+    padding-top: 3rem;
+    grid-row: 1/3;
+    grid-column: 1;
+
+}
+
+.header {
+    background-color: white;
+    grid-row: 1;
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding:1rem;
+    gap: 2rem;
+}
+
+.main {
+    background-color: #f3f4f6;
+    grid-row: 2;
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.main>.project {
+    grid-row: 1/3;
+    grid-column: 1;
+}
+
+.main>.project >div {
+    /* height: 100%; */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.main>.project>div>div {
+    background-color: white;
+    min-height: 200px;
+}
+
+.main>.announcement {
+    grid-row: 1;
+    grid-column: 2;
+}
+
+.main>.trending {
+    grid-row: 2;
+    grid-column: 2;
+}
+
+.sidebar>ul {
+    margin-top: 4rem;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.sidebar > .title,
+.sidebar>ul>li {
+    display: flex;
+    align-items: center;
+    gap:1rem;
+}
+.sidebar > .title {
+    font-size: 2rem;
+}
+
+.buttonsBar > .greeting {
+    display: flex;
+    align-items: center;
+}
+.buttonsBar > .greeting > img,
+.sidebar > .title > img {
+    width: 4rem;
+    height: 4rem;
+}
+
+img {
+    width: 2rem;
+    height: 2rem;
+    /* content: url(access-point.svg); */
+}
+
+.header>.searchBar,
+.header>.buttonsBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+.header>.buttonsBar>.greeting {
+    margin-right: auto;
+    display: flex;
+}
+input[type='search'] {
+    background-color: #f3f4f6;
+    width:35rem;
+    height:2rem;
+    border-radius: 0.8rem;
+    margin-right: auto;
+}
+.header > .searchBar > div {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.header > .buttonsBar > button {
+    font-size:1rem;
+    font-weight: bold;
+    color: white;
+    background-color: #06b6d4;
+    padding: 0.5rem 2rem 0.5rem 2rem;
+    border-radius: 1.2rem;
+}
+
+.circle-icon {
+    background: #ffc0c0; 
+    border-radius: 50%;
+}
+.header > .searchBar > .circle-icon {
+    width: 3rem;
+    height: 3rem;
+}
+
+.greeting span {
+    font-size: 1rem;
+    font-weight: bold;
+}
+.greeting p {
+    font-size: 2rem;
+    font-weight: bold;
+}
